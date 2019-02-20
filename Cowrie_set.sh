@@ -16,7 +16,7 @@ apt-get -y install git python-virtualenv libssl-dev libffi-dev build-essential l
 #apt-get -y install git python-virtualenv libssl-dev libffi-dev build-essential libpython-dev python2.7-minimal authbind
 echo second step:adduser cowrie
 echo =================================================================
-./test.sh
+./cowrie_step2.sh
 
 echo third step:download the cowrie code
 echo =================================================================
@@ -25,7 +25,7 @@ echo =================================================================
 #we can also use su cowrie, but i don't know why the coder of the program use the long one
 echo "cowrie ALL=(ALL)ALL" >> /etc/sudoers
 sudo -u cowrie bash << EOF
-echo "cowrie"|sudo -S ./test1.sh
+echo "cowrie"|sudo -S ./cowrie_step3.sh
 #send "cowrie\r"
 EOF
 
